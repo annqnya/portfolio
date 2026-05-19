@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annanya | Strategic Portfolio</title>
+    <title>Annanya | Digital & Strategy Archive</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -11,32 +11,29 @@
         
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #0A0A0A; 
+            background-color: #050505; 
             color: #E5E5E5; 
         }
         .serif-title {
             font-family: 'Cinzel', serif;
         }
         .gold-card { 
-            background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(10, 10, 10, 0.9) 100%);
-            border: 1px solid rgba(212, 175, 55, 0.12); 
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            background: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(8, 8, 8, 0.98) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.08); 
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .gold-card:hover {
-            border-color: rgba(212, 175, 55, 0.4);
-            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
-            transform: translateY(-2px);
+            border-color: rgba(212, 175, 55, 0.35);
+            box-shadow: 0 20px 40px -15px rgba(212, 175, 55, 0.1);
+            transform: translateY(-4px);
         }
         .gold-text { 
-            background: linear-gradient(135deg, #F5F7FA 0%, #B89742 50%, #D4AF37 100%); 
+            background: linear-gradient(135deg, #FFF 0%, #D4AF37 50%, #AA7C11 100%); 
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
         }
-        .gold-border {
-            border-color: rgba(212, 175, 55, 0.2);
-        }
-        .gold-glow {
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+        .active-dot {
+            box-shadow: 0 0 10px #D4AF37;
         }
     </style>
 </head>
@@ -44,38 +41,38 @@
 
     <div id="app" class="pb-24">
         
-        <nav class="sticky top-0 z-50 bg-[#0A0A0A] bg-opacity-90 border-b border-neutral-900 px-6 py-5 mb-12 backdrop-blur-md">
+        <nav class="sticky top-0 z-50 bg-[#050505] bg-opacity-90 border-b border-neutral-900 px-6 py-6 mb-16 backdrop-blur-md">
             <div class="max-w-5xl mx-auto flex justify-between items-center">
-                <a href="#" onclick="navigateTo('home')" class="serif-title font-bold text-lg tracking-widest text-[#D4AF37]">
+                <a href="#" onclick="navigateTo('home')" class="serif-title font-bold text-2xl tracking-widest text-[#D4AF37] hover:opacity-80 transition-opacity">
                     ANNANYA
                 </a>
-                <div class="flex gap-8 text-xs uppercase tracking-widest font-medium text-neutral-400">
-                    <button onclick="navigateTo('home')" class="hover:text-[#D4AF37] transition-colors">Portfolio</button>
-                    <a href="mailto:annqnya@gmail.com" class="hover:text-[#D4AF37] transition-colors flex items-center gap-1">Contact</a>
+                <div class="flex gap-8 text-[10px] uppercase tracking-widest font-semibold text-neutral-400">
+                    <button onclick="navigateTo('home')" class="hover:text-[#D4AF37] transition-colors">Archive</button>
+                    <a href="mailto:annqnya@gmail.com" class="hover:text-[#D4AF37] transition-colors">Contact</a>
                 </div>
             </div>
         </nav>
 
         <main class="max-w-4xl mx-auto px-6">
             
-            <div id="view-home" class="view-section space-y-20">
+            <div id="view-home" class="view-section space-y-24">
                 
-                <section class="space-y-6 pt-4 text-center md:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#141414] border border-amber-500/20 text-xs text-[#D4AF37] font-mono tracking-wider">
-                        <span class="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span> SYSTEM STATUS: ACTIVE EXECUTION
+                <section class="space-y-6 pt-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0F0F0F] border border-amber-500/20 text-[10px] text-[#D4AF37] font-mono tracking-widest uppercase">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37] active-dot animate-pulse"></span> Generalist Execution Moat
                     </div>
-                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-                        Deconstructing Business.<br>Engineering <span class="gold-text serif-title font-medium">Digital Moats</span>.
+                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight max-w-3xl">
+                        I am a generalist. I engineer consumer attention and deconstruct <span class="gold-text serif-title font-medium">Fintech Frameworks</span>.
                     </h1>
-                    <p class="text-neutral-400 text-lg max-w-2xl leading-relaxed font-light">
-                        I am a <strong class="text-white font-medium">2nd Year BBA Undergraduate</strong> operating at the intersection of marketplace economics, financial storytelling, and high-fidelity digital design. 
+                    <p class="text-neutral-400 text-base md:text-lg max-w-2xl leading-relaxed font-light">
+                        Currently a <strong class="text-white font-medium">2nd Year BBA Undergraduate</strong> operating on pure curiosity. I want to build, scale, and break everything—from underlying market regulation moats to product design ecosystems. I don't look at code boundaries; I build concepts that capture user intent.
                     </p>
                 </section>
 
                 <section class="space-y-8">
                     <div class="flex items-baseline justify-between border-b border-neutral-900 pb-4">
-                        <h2 class="serif-title text-lg tracking-widest text-neutral-300">Strategic Assets</h2>
-                        <span class="text-[10px] text-amber-500/60 uppercase tracking-widest font-mono">Curated Priority</span>
+                        <h2 class="serif-title text-sm tracking-widest text-neutral-400 uppercase">Core Production Proofs</h2>
+                        <span class="text-[9px] text-amber-500/60 uppercase tracking-widest font-mono">Real-time assets</span>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
@@ -83,81 +80,81 @@
                         <div onclick="navigateTo('fintech')" class="gold-card rounded-xl p-6 cursor-pointer group space-y-4">
                             <div class="flex justify-between items-start">
                                 <div class="text-[#D4AF37] text-lg"><i class="fa-solid fa-building-columns"></i></div>
-                                <span class="text-[10px] font-mono text-neutral-500 tracking-wider">ASSET 01 &bull; FINTECH</span>
+                                <span class="text-[9px] font-mono text-neutral-500 tracking-widest uppercase">PROJECT 01 &bull; FINTECH DEEP DIVE</span>
                             </div>
                             <div class="space-y-2">
-                                <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors">The Pivot to Legitimacy: slice Platform Analysis</h3>
-                                <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2">An architectural breakdown of regulatory boundaries in Indian fintech, analyzing compliance metrics as a structural corporate moat.</p>
+                                <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors">Compliance As A Moat: The slice Strategy</h3>
+                                <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2">Analyzing how slice successfully transitioned from a standard credit-app layer into a natively licensed bank entity by leveraging systemic compliance.</p>
                             </div>
                         </div>
 
                         <div onclick="navigateTo('cred')" class="gold-card rounded-xl p-6 cursor-pointer group space-y-4">
                             <div class="flex justify-between items-start">
                                 <div class="text-[#D4AF37] text-lg"><i class="fa-solid fa-brain"></i></div>
-                                <span class="text-[10px] font-mono text-neutral-500 tracking-wider">ASSET 02 &bull; STRATEGY BRIEF</span>
+                                <span class="text-[9px] font-mono text-neutral-500 tracking-widest uppercase">PROJECT 02 &bull; BRANDING PRESENTATION</span>
                             </div>
                             <div class="space-y-2">
-                                <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors">Kunal Shah Brand Rhetoric Analysis</h3>
-                                <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2">Deconstructing personal branding infrastructure via Aristotelian models, proposing an ecosystem transition from "Status" to "Trust".</p>
+                                <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors">Kunal Shah Rhetoric Strategy & Slide Deck</h3>
+                                <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2">Deconstructing the Ethos, Pathos, and Logos behind CRED's founder persona. Features embedded native presentation file showcasing slide layout composition.</p>
                             </div>
                         </div>
 
                         <div onclick="navigateTo('starbucks')" class="gold-card rounded-xl p-6 cursor-pointer group space-y-4">
                             <div class="flex justify-between items-start">
                                 <div class="text-[#D4AF37] text-lg"><i class="fa-solid fa-coins"></i></div>
-                                <span class="text-[10px] font-mono text-neutral-500 tracking-wider">ASSET 03 &bull; CAPITAL CYCLE</span>
+                                <span class="text-[9px] font-mono text-neutral-500 tracking-widest uppercase">PROJECT 03 &bull; CAPITAL ALLOCATION</span>
                             </div>
                             <div class="space-y-2">
-                                <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors">Why Starbucks is a Bank in Disguise</h3>
-                                <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2">A study on consumer liquidity management. Mapping how closed-loop reward apps secure $1.6B in interest-free float.</p>
+                                <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors">Unregulated Cash Flow: The Starbucks Bank Model</h3>
+                                <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2">Investigating consumer deposit retention. Mapping how a coffee empire captures over $1.6B in interest-free operational float.</p>
                             </div>
                         </div>
 
                         <div onclick="navigateTo('jargon')" class="gold-card rounded-xl p-6 cursor-pointer group space-y-4">
                             <div class="flex justify-between items-start">
-                                <div class="text-[#D4AF37] text-lg"><i class="fa-solid fa-compass text-lg"></i></div>
-                                <span class="text-[10px] font-mono text-neutral-500 tracking-wider">ASSET 04 &bull; LITERACY BLUEPRINT</span>
+                                <div class="text-[#D4AF37] text-lg"><i class="fa-solid fa-compass"></i></div>
+                                <span class="text-[9px] font-mono text-neutral-500 tracking-widest uppercase">PROJECT 04 &bull; CONTENT MATRIX</span>
                             </div>
                             <div class="space-y-2">
-                                <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors">The De-Jargonizer: Stocks vs. Dividends</h3>
-                                <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2">Developing modular, high-retention content script matrices designed to translate corporate jargon into consumer-grade understanding.</p>
+                                <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors">The De-Jargonizer: Demystifying Equities</h3>
+                                <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2">Creating high-retention consumer content scripts utilizing real-world organic metaphors to clarify dry corporate asset features.</p>
                             </div>
                         </div>
 
                         <a href="https://annqnya.github.io/mitti/" target="_blank" class="gold-card rounded-xl p-6 group space-y-4 block">
                             <div class="flex justify-between items-start">
-                                <div class="p-1 text-[#D4AF37] text-lg"><i class="fa-solid fa-leaf"></i></div>
-                                <span class="text-[10px] font-mono text-neutral-500 tracking-wider">LIVE PLATFORM</span>
+                                <div class="text-[#D4AF37] text-lg"><i class="fa-solid fa-leaf"></i></div>
+                                <span class="text-[9px] font-mono text-neutral-500 tracking-widest uppercase">LIVE WEB APPLICATION</span>
                             </div>
                             <div class="space-y-2">
                                 <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors flex items-center justify-between">
                                     Ecofest Platform: Mitti <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-40"></i>
                                 </h3>
-                                <p class="text-neutral-400 text-xs leading-relaxed">A live, production-grade interface designed to demonstrate clean minimalist web layout aesthetics and platform functionality.</p>
+                                <p class="text-neutral-400 text-xs leading-relaxed"><strong>Academic Peak:</strong> Engineered a minimalist web system that brought in the highest grade in the class based on product revenue optimization, live defense, and viva execution.</p>
                             </div>
                         </a>
 
                         <div onclick="navigateTo('economics')" class="gold-card rounded-xl p-6 cursor-pointer group space-y-4">
                             <div class="flex justify-between items-start">
                                 <div class="text-[#D4AF37] text-lg"><i class="fa-solid fa-clapperboard"></i></div>
-                                <span class="text-[10px] font-mono text-neutral-500 tracking-wider">ASSET 06 &bull; VIDEO ESSAY</span>
+                                <span class="text-[9px] font-mono text-neutral-500 tracking-widest uppercase">PROJECT 06 &bull; VIDEO ESSAY INSIGHTS</span>
                             </div>
                             <div class="space-y-2">
                                 <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors">Supermarkets vs. Local Retail Vendors</h3>
-                                <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2">A deep research initiative tracing micro-retail market shifts, adapted completely into an analytical video essay framework.</p>
+                                <p class="text-neutral-400 text-xs leading-relaxed line-clamp-2">A microeconomic field investigation tracking geographic displacement metrics, integrated alongside a native video playback interface.</p>
                             </div>
                         </div>
 
                         <a href="https://hootumtohashtagbyam.netlify.app/" target="_blank" class="gold-card rounded-xl p-6 group space-y-4 block col-span-1 md:col-span-2">
                             <div class="flex justify-between items-start">
                                 <div class="text-[#D4AF37] text-lg"><i class="fa-solid fa-fire"></i></div>
-                                <span class="text-[10px] font-mono text-neutral-500 tracking-wider">LIVE SYSTEM</span>
+                                <span class="text-[9px] font-mono text-neutral-500 tracking-widest uppercase">LIVE INTERACTIVE ROADMAP</span>
                             </div>
                             <div class="space-y-2">
                                 <h3 class="text-base font-bold text-neutral-200 group-hover:text-[#D4AF37] transition-colors flex items-center justify-between">
-                                    Hootum to Hashtag: Meme Distribution Mechanics <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-40"></i>
+                                    Hootum to Hashtag: Meme Marketing Logic <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-40"></i>
                                 </h3>
-                                <p class="text-neutral-400 text-xs leading-relaxed">An interactive web roadmap tracing historical text evolutions into modern corporate viral communication frameworks.</p>
+                                <p class="text-neutral-400 text-xs leading-relaxed"><strong>The Strategy Passion:</strong> Internet distribution has always fascinated me. This web application tracks the structural history of media, showing how brands weaponize low-fi meme formats to bypass corporate customer acquisition costs.</p>
                             </div>
                         </a>
 
@@ -166,114 +163,189 @@
 
                 <section class="space-y-8">
                     <div class="flex items-baseline justify-between border-b border-neutral-900 pb-4">
-                        <h2 class="serif-title text-lg tracking-widest text-neutral-300">Creative Outlets & Perspectives</h2>
-                        <span class="text-[10px] text-amber-500/60 uppercase tracking-widest font-mono">The Human Variable</span>
+                        <h2 class="serif-title text-sm tracking-widest text-neutral-400 uppercase">Creative Outlets & Perspectives</h2>
+                        <span class="text-[9px] text-amber-500/60 uppercase tracking-widest font-mono">The Human Variable</span>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-neutral-400">
-                        <div class="p-5 rounded-xl bg-[#111] border border-neutral-900 space-y-2">
+                        <div class="p-5 rounded-xl bg-[#0b0b0b] border border-neutral-900 space-y-2">
                             <h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-[#D4AF37]"><i class="fa-solid fa-camera mr-1.5"></i> Visual Composition</h4>
                             <p class="leading-relaxed">Analyzing frames, lighting layout design, and structural color schemes to capture focus instantly.</p>
                         </div>
-                        <div class="p-5 rounded-xl bg-[#111] border border-neutral-900 space-y-2">
+                        <div class="p-5 rounded-xl bg-[#0b0b0b] border border-neutral-900 space-y-2">
                             <h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-[#D4AF37]"><i class="fa-solid fa-book-open mr-1.5"></i> Strategic Literature</h4>
                             <p class="leading-relaxed">Studying system logic patterns, historical marketing distribution networks, and socio-economic frameworks.</p>
                         </div>
-                        <div class="p-5 rounded-xl bg-[#111] border border-neutral-900 space-y-2">
+                        <div class="p-5 rounded-xl bg-[#0b0b0b] border border-neutral-900 space-y-2">
                             <h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-[#D4AF37]"><i class="fa-solid fa-gamepad mr-1.5"></i> Interactive Media Systems</h4>
                             <p class="leading-relaxed">Evaluating interface friction points, user feedback loops, and viral community interaction triggers.</p>
                         </div>
                     </div>
                 </section>
 
-                <footer class="border-t border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-neutral-500">
-                    <p>&copy; 2026 Annanya. Built for High Intent.</p>
-                    <div class="flex gap-6">
-                        <a href="mailto:annqnya@gmail.com" class="hover:text-[#D4AF37] transition-colors"><i class="fa-solid fa-envelope mr-1 text-xs"></i> Email</a>
-                        <a href="https://instagram.com/annqnya" target="_blank" class="hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-instagram mr-1 text-xs"></i> Instagram</a>
+                <footer class="border-t border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-mono text-neutral-500">
+                    <p>&copy; 2026 Annanya. All Assets Active.</p>
+                    <div class="flex gap-8">
+                        <a href="mailto:annqnya@gmail.com" class="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5"><i class="fa-solid fa-envelope text-xs"></i> Email</a>
+                        <a href="https://instagram.com/annqnya" target="_blank" class="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5"><i class="fa-brands fa-instagram text-xs"></i> Instagram</a>
                     </div>
                 </footer>
 
             </div>
 
             <div id="view-fintech" class="view-section hidden space-y-8">
-                <button onclick="navigateTo('home')" class="text-xs uppercase tracking-widest text-neutral-400 hover:text-[#D4AF37] flex items-center gap-2 font-mono"><i class="fa-solid fa-arrow-left"></i> Return to Dashboard</button>
-                <div class="space-y-3">
-                    <h1 class="serif-title text-2xl tracking-wider text-white">The Pivot to Legitimacy: slice & Fintech Strategy</h1>
-                    <p class="text-neutral-400 text-sm font-light">Deconstructing why standard neo-banking overlays are hitting regulatory boundaries and how structural corporate plays establish scale stability.</p>
+                <button onclick="navigateTo('home')" class="text-[10px] uppercase tracking-widest text-neutral-400 hover:text-[#D4AF37] flex items-center gap-2 font-mono"><i class="fa-solid fa-arrow-left"></i> Return to Dashboard</button>
+                <div class="space-y-2">
+                    <h1 class="serif-title text-3xl tracking-wider text-white">Project 01: Compliance as a Moat (slice Case Study)</h1>
+                    <p class="text-neutral-400 text-sm font-light">An engineering review analyzing slice's transition from a standard credit-card application layer to a fully independent, certified financial banking charter.</p>
                 </div>
-                <div class="gold-card rounded-xl p-8 space-y-6 leading-relaxed text-sm text-neutral-300">
+                <div class="gold-card rounded-xl p-8 space-y-6 text-sm text-neutral-300 leading-relaxed font-light">
                     <div>
-                        <h3 class="text-white font-bold mb-1 tracking-wide">1. The Neo-Bank Regulatory Constraint</h3>
-                        <p class="font-light">Platforms operating purely as front-end digital overlays risk execution volatility whenever host banking conditions undergo compliance shifts. Operating without explicit, direct core licensing isolates tech architectures from foundational sustainability.</p>
+                        <h3 class="text-white font-bold mb-2 tracking-wide text-base border-b border-neutral-800 pb-1">1. The Neo-Bank Fragility Problem</h3>
+                        <p class="text-neutral-400">Standard modern neo-banking systems function primarily as clean visual interfaces slapped on top of heritage banking layers. Because they do not hold an independent regulatory license, they are subject to extreme operational shocks whenever compliance conditions adjust on the host bank system. This limits their capacity to control unit economics and retain product autonomy.</p>
                     </div>
                     <div>
-                        <h3 class="text-white font-bold mb-1 tracking-wide">2. The slice Strategy</h3>
-                        <p class="font-light">Instead of running as a service layers, slice executed a direct amalgamation framework alongside North East Small Finance Bank. This shifted the brand from an app dependent on third-party frameworks into a natively licensed financial institution.</p>
+                        <h3 class="text-white font-bold mb-2 tracking-wide text-base border-b border-neutral-800 pb-1">2. Compliance as the Moat: The slice Strategy</h3>
+                        <p class="text-neutral-400">Instead of building another layer of software vulnerabilities, slice executed a direct amalgamation framework alongside North East Small Finance Bank. This structural merger bypassed partner dependencies entirely, transitioning slice into a natively licensed, deposit-taking financial institution. By turning compliance into a feature, they created a highly defensible platform infrastructure.</p>
                     </div>
-                    <div class="p-4 rounded-lg bg-amber-500/5 border border-amber-500/20 text-xs text-[#D4AF37] font-mono">
-                        "In Indian fintech, user interfaces are commodities; compliance frameworks are the final distribution moats."
+                    <div>
+                        <h3 class="text-white font-bold mb-2 tracking-wide text-base border-b border-neutral-800 pb-1">3. The Product Flywheel: UPI-First Ecosystem</h3>
+                        <p class="text-neutral-400">With full regulatory freedom, slice engineers products directly tied to modern spending behaviors. This includes linking savings yields directly to RBI repo fluctuations and unifying line credit natively within the local UPI scanning engine. Credit is deployed directly inside routine, high-velocity digital points of sale where liquidity demand peaks.</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-amber-500/5 border border-amber-500/20 text-xs text-[#D4AF37] font-mono text-center">
+                        "In modern Indian fintech, elegant user interfaces are easily commoditized. Deep institutional compliance is the final customer distribution moat."
                     </div>
                 </div>
             </div>
 
             <div id="view-cred" class="view-section hidden space-y-8">
-                <button onclick="navigateTo('home')" class="text-xs uppercase tracking-widest text-neutral-400 hover:text-[#D4AF37] flex items-center gap-2 font-mono"><i class="fa-solid fa-arrow-left"></i> Return to Dashboard</button>
-                <div class="space-y-3">
-                    <h1 class="serif-title text-2xl tracking-wider text-white">Rhetorical Brand Deconstruction: Kunal Shah</h1>
-                    <p class="text-neutral-400 text-sm font-light">A framework deep dive isolating personal brand positioning mechanics utilizing classical rhetoric persuasion tracks.</p>
+                <button onclick="navigateTo('home')" class="text-[10px] uppercase tracking-widest text-neutral-400 hover:text-[#D4AF37] flex items-center gap-2 font-mono"><i class="fa-solid fa-arrow-left"></i> Return to Dashboard</button>
+                <div class="space-y-2">
+                    <h1 class="serif-title text-3xl tracking-wider text-white">Project 02: Brand Rhetoric Analysis Deck</h1>
+                    <p class="text-neutral-400 text-sm font-light">A framework portfolio analyzing personal brand mechanics via Aristotelian persuasion engines.</p>
                 </div>
-                <div class="gold-card rounded-xl p-8 space-y-6 text-sm text-neutral-300">
-                    <div class="grid md:grid-cols-3 gap-4 text-center text-xs">
-                        <div class="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800"><h4 class="font-bold text-[#D4AF37] uppercase tracking-wider mb-1">Ethos</h4><p class="text-neutral-400 font-light">The "Outsider Philosopher" tracking track-record authority.</p></div>
-                        <div class="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800"><h4 class="font-bold text-[#D4AF37] uppercase tracking-wider mb-1">Pathos</h4><p class="text-neutral-400 font-light">Leveraging high-concept intelligence cues vs. millennial nostalgia.</p></div>
-                        <div class="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800"><h4 class="font-bold text-[#D4AF37] uppercase tracking-wider mb-1">Logos</h4><p class="text-neutral-400 font-light">Unconventional metrics testing human status hierarchies.</p></div>
+                
+                <div class="gold-card rounded-xl overflow-hidden bg-black border border-amber-500/30">
+                    <div class="flex justify-between items-center px-4 py-3 bg-[#090909] border-b border-neutral-900 text-xs font-mono">
+                        <span class="text-neutral-300"><i class="fa-solid fa-file-powerpoint text-amber-500 mr-2"></i> kunalshah.pptx</span>
+                        <span class="text-[9px] text-amber-500/70 uppercase tracking-widest bg-amber-500/5 px-2 py-0.5 rounded border border-amber-500/10">Interactive Presentation Viewer</span>
                     </div>
-                    <div>
-                        <h3 class="text-white font-bold mb-1 tracking-wide">The Strategic Proposition</h3>
-                        <p class="font-light">While an exclusive, "premium-only" positioning model optimizes high-value cardholder acquisition, it restricts infinite national expansion profiles. Building a trusted cornerstone utility requires an infrastructure pivot from individual premium status toward collective ecosystem trust.</p>
-                    </div>
+                    <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://annqnya.github.io/portfolio/kunalshah.pptx" width="100%" class="aspect-video border-0" allowfullscreen="true"></iframe>
+                </div>
+
+                <div class="gold-card rounded-xl p-8 space-y-4 text-sm text-neutral-400 leading-relaxed font-light">
+                    <h3 class="text-white font-bold text-base tracking-wide">Executive Summary</h3>
+                    <p>This layout deconstructs how Kunal Shah aligns platforms against disparate audiences. He commands executive validation on LinkedIn via dense psychological paradoxes (Logos), while maintaining immediate culture status on consumer avenues via dark existential meme assets (Pathos). The embedded slide framework details my proposal for executing an operational pivot from an "Exclusive Aura" to an "Ecosystem Architecture" centered around national utility trust networks.</p>
                 </div>
             </div>
 
             <div id="view-starbucks" class="view-section hidden space-y-8">
-                <button onclick="navigateTo('home')" class="text-xs uppercase tracking-widest text-neutral-400 hover:text-[#D4AF37] flex items-center gap-2 font-mono"><i class="fa-solid fa-arrow-left"></i> Return to Dashboard</button>
-                <div class="space-y-3">
-                    <h1 class="serif-title text-2xl tracking-wider text-white">Why Starbucks is a Bank in Disguise</h1>
+                <button onclick="navigateTo('home')" class="text-[10px] uppercase tracking-widest text-neutral-400 hover:text-[#D4AF37] flex items-center gap-2 font-mono"><i class="fa-solid fa-arrow-left"></i> Return to Dashboard</button>
+                <div class="space-y-2">
+                    <h1 class="serif-title text-3xl tracking-wider text-white">Why Starbucks is a Bank in Disguise</h1>
                     <p class="text-neutral-400 text-sm font-light">Evaluating consumer ecosystem stickiness metrics and closed-loop liquidity cycles.</p>
                 </div>
-                <div class="gold-card rounded-xl p-8 space-y-4 text-sm text-neutral-300 font-light">
-                    <p>By packaging digital loyalty apps into specialized prepaid systems, Starbucks secures over <strong>$1.6 Billion</strong> in unspent balances globally. This pool effectively acts as an interest-free loan funded completely by active platform consumers, bypassing typical institutional debt fees.</p>
-                    <p>Furthermore, annual "Breakage" realizations convert inactive balances into highly optimized internal margins, proving modern business engineering goes far beyond simple physical retail assets.</p>
+                <div class="gold-card rounded-xl p-8 space-y-6 text-sm text-neutral-300 leading-relaxed font-light">
+                    <div>
+                        <h3 class="text-white font-bold mb-1 text-base tracking-wide border-b border-neutral-800 pb-1">1. The Closed-Loop Float Model</h3>
+                        <p class="text-neutral-400 font-light">By convincing consumers to load flat physical currency onto digital loyalty profiles, Starbucks builds a closed-loop system where fiat value converts directly into proprietary app-store credits. This capital is entirely captured by corporate banking balances before any physical beverage fulfillment takes place.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-1 text-base tracking-wide font-mono text-[#D4AF37] border-b border-neutral-800 pb-1">2. Monetizing the Interest Variable</h3>
+                        <p class="text-neutral-400 font-light">With more than <strong>$1.6 Billion</strong> sitting unspent across international consumer cards, Starbucks accesses an aggregate, interest-free capital reserve funded completely by the user. While competitors leverage traditional debt facilities matching current high-interest yields, Starbucks borrows directly from its consumer base at an absolute 0% premium, using the liquidity to optimize operational real estate development loops.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-1 text-base tracking-wide border-b border-neutral-800 pb-1">3. The Breakage Margin Factor</h3>
+                        <p class="text-neutral-400 font-light">In standard corporate accounting, forgotten or partially abandoned gift card values are cataloged as "Breakage." Starbucks consistently claims over <strong>$150 Million annually</strong> from lost or unredeemed balances, turning idle consumer habits directly into raw, high-margin revenue cycles with a near 100% operational yield profile.</p>
+                    </div>
                 </div>
             </div>
 
             <div id="view-jargon" class="view-section hidden space-y-8">
-                <button onclick="navigateTo('home')" class="text-xs uppercase tracking-widest text-neutral-400 hover:text-[#D4AF37] flex items-center gap-2 font-mono"><i class="fa-solid fa-arrow-left"></i> Return to Dashboard</button>
-                <div class="space-y-3">
-                    <h1 class="serif-title text-2xl tracking-wider text-white">The De-Jargonizer Content System</h1>
-                    <p class="text-neutral-400 text-sm font-light">A script blueprint designed to improve financial literacy thresholds via structural visual analogies.</p>
+                <button onclick="navigateTo('home')" class="text-[10px] uppercase tracking-widest text-neutral-400 hover:text-[#D4AF37] flex items-center gap-2 font-mono"><i class="fa-solid fa-arrow-left"></i> Return to Dashboard</button>
+                <div class="space-y-2">
+                    <h1 class="serif-title text-3xl tracking-wider text-white">Project 04: The De-Jargonizer Script Matrix</h1>
+                    <p class="text-neutral-400 text-sm font-light">Translating institutional equity terms into high-retention consumer-facing blueprints.</p>
                 </div>
-                <div class="gold-card rounded-xl p-6 space-y-4 font-mono text-xs text-[#D4AF37]">
-                    <div>[CARD 01] &bull; "Most consumers invest in the tree, but entirely drop focus on the fruit."</div>
-                    <div class="text-neutral-400">[CARD 02] &bull; Stock Mechanics = Buying the Tree. Capital appreciation profiles tracking valuation changes over macro cycles.</div>
-                    <div class="text-neutral-400">[CARD 03] &bull; Dividend Yield = Realizing the Fruit. Mature, cash-rich enterprises returning excess liquid assets straight back to investors.</div>
-                    <div class="text-neutral-400">[CARD 04] &bull; Scale dynamics (Zomato) allocate cash to height extensions; mature value plays yield seasonal fruit.</div>
+                <div class="gold-card rounded-xl p-8 space-y-6 text-sm text-neutral-400 leading-relaxed font-light">
+                    <p>Complex market vocabulary built around investment classes often isolates beginners. This storyboard matrix builds a structured 5-part script format designed to convert dry financial terminology into highly viral, accessible visual assets.</p>
+                    <div class="gold-card rounded-xl p-6 space-y-4 font-mono text-xs text-[#D4AF37] bg-neutral-950">
+                        <div>[CARD 01] &bull; "Most consumers invest in the tree, but entirely drop focus on the fruit. Let's deconstruct your stock choices."</div>
+                        <div class="text-neutral-500">[CARD 02] &bull; Stock Mechanics = Buying the Tree. Capital appreciation profiles tracking asset valuation metrics across macro growth parameters. You purchase ownership stakes expecting the asset architecture to grow over structural horizons.</div>
+                        <div class="text-neutral-500">[CARD 03] &bull; Dividend Yield = Harvesting the Fruit. Cash-rich corporations returning excess operational cash metrics straight back to shareholders. You keep the tree structure intact while consistently drawing seasonal yields.</div>
+                        <div class="text-neutral-400">[CARD 04] &bull; Scale plays (Zomato) redirect profits into expanding heights; value assets share their structural yield immediately.</div>
+                        <div class="text-neutral-400">[CARD 05] &bull; Interaction Call-to-Action: Is your investment plan oriented around scaling forest density tomorrow, or harvesting fruit options today? Drop your strategy preference below.</div>
+                    </div>
                 </div>
             </div>
 
             <div id="view-economics" class="view-section hidden space-y-8">
-                <button onclick="navigateTo('home')" class="text-xs uppercase tracking-widest text-neutral-400 hover:text-[#D4AF37] flex items-center gap-2 font-mono"><i class="fa-solid fa-arrow-left"></i> Return to Dashboard</button>
-                <div class="space-y-3">
-                    <h1 class="serif-title text-2xl tracking-wider text-white">Supermarkets vs. Local Retail Vendors</h1>
-                    <p class="text-neutral-400 text-sm font-light">Tracking geographic retail transformations and micro-merchant positioning.</p>
+                <button onclick="navigateTo('home')" class="text-[10px] uppercase tracking-widest text-neutral-400 hover:text-[#D4AF37] flex items-center gap-2 font-mono"><i class="fa-solid fa-arrow-left"></i> Return to Dashboard</button>
+                <div class="space-y-2">
+                    <h1 class="serif-title text-3xl tracking-wider text-white">Project 06: Supermarkets vs. Local Vendors (Field Report)</h1>
+                    <p class="text-neutral-400 text-sm font-light">Case file #2024-AGRI-001: A confidential market investigation deconstructing competitive weapons across urban micro-retail ecosystems[cite: 102, 105, 106].</p>
                 </div>
-                <div class="gold-card rounded-xl p-8 space-y-5 text-sm text-neutral-300 font-light">
-                    <p>A second-semester market study mapping how supply chain consolidation loops alter localized trader margins. To challenge normal academic distribution limits, this research was adapted into a complete video essay storyboard framework.</p>
-                    <div class="border border-neutral-950 rounded-lg p-4 bg-neutral-900/40 flex items-center gap-4">
-                        <div class="text-[#D4AF37] text-xl"><i class="fa-solid fa-clapperboard"></i></div>
-                        <div>
-                            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Video Essay Storyboard Included</h4>
-                            <p class="text-xs text-neutral-400 mt-0.5 font-light">Showcases execution patterns across script management, audio-visual alignment, and economic arguments.</p>
+                
+                <div class="gold-card rounded-xl overflow-hidden bg-black border border-amber-500/20 shadow-2xl">
+                    <div class="flex justify-between items-center px-4 py-3 bg-[#090909] border-b border-neutral-900 text-xs font-mono">
+                        <span class="text-neutral-300"><i class="fa-solid fa-circle-play text-red-500 mr-2"></i> economics.mp4</span>
+                        <span class="text-[9px] text-neutral-500 uppercase tracking-widest">Video Essay Production</span>
+                    </div>
+                    <video class="w-full aspect-video bg-neutral-950 block" controls preload="metadata">
+                        <source src="economics.mp4" type="video/mp4">
+                        Your browser engine does not support native HTML5 video streaming tags.
+                    </video>
+                </div>
+
+                <div class="gold-card rounded-xl p-8 space-y-6 text-sm text-neutral-300 leading-relaxed font-light">
+                    
+                    <div class="grid md:grid-cols-2 gap-4 text-xs font-mono text-neutral-400">
+                        <div class="p-4 bg-neutral-950 rounded-lg border border-neutral-900">
+                            <span class="text-[#D4AF37] font-bold block mb-2 uppercase tracking-wider"><i class="fa-solid fa-clipboard-list mr-1"></i> Investigation Scope [cite: 108]</span>
+                            <ul class="space-y-1">
+                                <li>&bull; 5 Local Vendors Tracked [cite: 110]</li>
+                                <li>&bull; 2 Major Chains Surveyed [cite: 111]</li>
+                                <li>&bull; 3-Week Observational Window [cite: 113]</li>
+                                <li>&bull; Target Metrics: Onions & Potatoes [cite: 114]</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-neutral-950 rounded-lg border border-neutral-900">
+                            <span class="text-[#D4AF37] font-bold block mb-2 uppercase tracking-wider"><i class="fa-solid fa-calculator mr-1"></i> Observed Elasticities [cite: 136]</span>
+                            <ul class="space-y-1">
+                                <li>&bull; Onions PED: <strong class="text-red-400">-1.70 (Elastic)</strong> [cite: 141]</li>
+                                <li>&bull; Potatoes PED: <strong class="text-red-400">-1.62 (Elastic)</strong> [cite: 148]</li>
+                                <li>&bull; Shift Impact: 1% Price Bump triggers >1.6% drop [cite: 143, 150]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-white font-bold text-base tracking-wide border-b border-neutral-800 pb-1 mb-2">1. The Smoking Gun: Microeconomic Price Sensitivity</h3>
+                        <p class="text-neutral-400">Our calculations yield high elasticities for basic kitchen staples across open-air markets[cite: 141, 148, 152]. Because consumers are highly sensitive to price changes, minor inflationary adjustments on local stands push immediate transactional traffic directly toward centralized supermarket chains that manage stable, locked pricing[cite: 152].</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-white font-bold text-base tracking-wide border-b border-neutral-800 pb-1 mb-2">2. Supply Chain Fragility Analysis</h3>
+                        <p class="text-neutral-400">Local merchants show acute supply system vulnerabilities. <strong>80% of surveyed local vendors operate under volatile, single-source procurement vulnerabilities</strong>, meaning any market price spike leaves them exposed to instant layout risks[cite: 176, 178, 179, 182]. Supermarkets counter this via massive centralized buffer inventory systems and predictable pricing channels[cite: 184, 185, 187].</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-white font-bold text-base tracking-wide border-b border-neutral-800 pb-1 mb-2">3. Cognitive Heuristics & Consumer Bias</h3>
+                        <p class="text-neutral-400">Supermarkets do not just win on commodity pricing; they weaponize psychological biases to simplify consumer decisions[cite: 206]:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-neutral-400 text-xs">
+                            <li><strong>Availability Heuristic:</strong> "Supermarkets are top-of-mind because they are always open"[cite: 197].</li>
+                            <li><strong>Anchoring Effects:</strong> Corporate cleanliness cues act as an automatic heuristic shortcut for freshness[cite: 199, 202].</li>
+                            <li><strong>Loss Aversion:</strong> Lower-income segments anchor to local vendors for absolute affordability, while middle-income profiles pay a convenience premium to minimize risk options[cite: 160, 164, 168].</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-lg bg-neutral-900/50 border border-neutral-800">
+                            <span class="text-white font-bold text-xs uppercase tracking-wider block mb-2">Supermarket Arsenal [cite: 224]</span>
+                            <p class="text-xs text-neutral-400 font-light leading-relaxed">Integrated multi-source supply lines, perceived hygiene advantages, predictable pricing, and convenient one-stop customer configurations[cite: 186, 202, 226, 229, 230].</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-neutral-900/50 border border-neutral-800">
+                            <span class="text-white font-bold text-xs uppercase tracking-wider block mb-2">Local Vendor Strengths [cite: 231]</span>
+                            <p class="text-xs text-neutral-400 font-light leading-relaxed">Lowest floor pricing metrics, deep direct-producer trust, and strong personal neighborhood community connections[cite: 232, 233, 234, 235].</p>
                         </div>
                     </div>
                 </div>
