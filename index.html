@@ -122,6 +122,7 @@
             text-decoration: none;
             border-radius: 4px;
             transition: all 0.2s ease;
+            cursor: pointer;
         }
 
         .btn-primary {
@@ -219,6 +220,21 @@
             text-decoration: underline;
         }
 
+        .ppt-viewer-container {
+            margin-top: 1rem;
+            width: 100%;
+            height: 250px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .ppt-viewer-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         .project-breakdown {
             display: flex;
             flex-direction: column;
@@ -280,33 +296,84 @@
             color: var(--accent-gold);
         }
 
-        /* Writing Matrix */
+        /* Writing Matrix (Interactive Expandable Design) */
         .writing-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
         }
 
         .essay-card {
             border: 1px solid var(--border-color);
             padding: 2rem;
             border-radius: 6px;
-            transition: border-color 0.2s ease;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            background: var(--card-bg);
         }
 
         .essay-card:hover {
             border-color: var(--accent-gold);
         }
 
-        .essay-card h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.01em;
+        .essay-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .essay-card p {
+        .essay-card h4 {
+            font-size: 1.3rem;
+            letter-spacing: -0.01em;
+            color: var(--text-primary);
+        }
+
+        .essay-trigger-icon {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .essay-preview {
             font-size: 0.95rem;
             color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        .essay-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+            font-size: 1rem;
+            color: var(--text-secondary);
+            border-top: 1px solid transparent;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        /* Active expanded state styles handled via tiny JS script */
+        .essay-card.expanded {
+            border-color: var(--text-primary);
+        }
+        .essay-card.expanded .essay-trigger-icon {
+            transform: rotate(45deg);
+        }
+        .essay-card.expanded .essay-content {
+            max-height: 2000px; /* Large safe value for smooth reveal */
+            transition: max-height 0.5s ease-in;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        .essay-card.expanded .essay-preview {
+            display: none;
+        }
+
+        .essay-content p {
+            margin-bottom: 1rem;
         }
 
         /* Resume & Documents */
@@ -357,7 +424,6 @@
             .nav-links { gap: 1rem; flex-wrap: wrap; }
             #hero { padding: 4rem 0 3rem 0; }
             .project-card { grid-template-columns: 1fr; gap: 1rem; }
-            .writing-grid { grid-template-columns: 1fr; }
             footer { flex-direction: column; gap: 1rem; align-items: flex-start; }
         }
     </style>
@@ -422,7 +488,10 @@
             <div class="project-card">
                 <div class="project-meta">
                     <h3>CRED Founder Rhetoric Strategy</h3>
-                    <a href="kunalshah.pptx" class="project-link" download>Download Presentation Asset ↓</a>
+                    <div class="ppt-viewer-container">
+                        <!-- Natively embeds your repository pptx file into web viewer using your live pages root path -->
+                        <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://annqnya.github.io/portfolio/kunalshah.pptx" frameborder="0"></iframe>
+                    </div>
                 </div>
                 <div class="project-breakdown">
                     <div class="step-block"><span class="step-label">Problem</span><p>Deconstruct systemic mechanics behind founder brand equity signaling.</p></div>
@@ -494,6 +563,8 @@
             <div class="project-card">
                 <div class="project-meta">
                     <h3>Mitti & Hootum</h3>
+                    <a href="https://annqnya.github.io/mitti/" class="project-link" target="_blank" style="margin-right: 15px;">Launch Mitti ↗</a>
+                    <a href="https://hootumtohashtagbyam.netlify.app" class="project-link" target="_blank">Launch Hootum ↗</a>
                 </div>
                 <div class="project-breakdown">
                     <div class="step-block"><span class="step-label">Problem</span><p>Test end-to-end software building cycles from zero blueprint data to live public functional deployments.</p></div>
@@ -546,26 +617,64 @@
         </div>
     </section>
 
-    <!-- Section: Writing & Thinking Matrix -->
+    <!-- Section: Writing & Thinking Matrix (Interactive Reveal Setup) -->
     <section id="writing">
         <h2 class="section-title">Writing & Thinking</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 2rem;">Select a focus area below to unpack the full strategic commentary.</p>
         <div class="writing-grid">
-            <div class="essay-card">
-                <h4>What Makes a Startup Defensible?</h4>
-                <p>Code alone rarely saves companies anymore. True longevity is driven by strong network effects, high switching friction, and distribution architecture that competitors can't easily recreate.</p>
+            
+            <!-- Essay 1 -->
+            <div class="essay-card" onclick="toggleEssay(this)">
+                <div class="essay-header">
+                    <h4>What Makes a Startup Defensible?</h4>
+                    <span class="essay-trigger-icon">+</span>
+                </div>
+                <p class="essay-preview">Code alone rarely saves companies anymore. True longevity is driven by distribution loops and switching friction.</p>
+                <div class="essay-content">
+                    <p>In modern startup operations, code alone rarely functions as a long-term defensible moat. With the rise of modular software components and AI-assisted prototyping, anything built can be rapidly duplicated by competitors within days. True defensibility has shifted from <i>what you build</i> to <i>how your system retains value</i>.</p>
+                    <p>When analyzing early-stage structures, sustainable defensibility is primarily driven by three core engines: embedded workflows that generate high user switching friction, proprietary data flywheels that scale product utility automatically with usage, and asymmetric distribution networks that competitors cannot replicate simply by buying ads. An operator's real job is to identify and safeguard these hidden operational levers, protecting product margins over vanity volume gains.</p>
+                </div>
             </div>
-            <div class="essay-card">
-                <h4>Why Consumer Trust Beats Discounts</h4>
-                <p>Buying growth through subsidies creates volatile metrics. Long-term loyalty is won by dropping complex terms, matching expectations every single time, and keeping pricing frameworks incredibly transparent.</p>
+
+            <!-- Essay 2 -->
+            <div class="essay-card" onclick="toggleEssay(this)">
+                <div class="essay-header">
+                    <h4>Why Consumer Trust Beats Discounts</h4>
+                    <span class="essay-trigger-icon">+</span>
+                </div>
+                <p class="essay-preview">Buying growth through subsidies creates volatile metrics. Long-term loyalty is won by clarity and execution.</p>
+                <div class="essay-content">
+                    <p>Subsidizing user growth through transactional burn and constant discounting creates fragile balance sheets. While aggressive discounting strategies look clean on short-term onboarding reports, they attract market-cycling consumers who hold zero structural loyalty and depart the moment capital incentives stop.</p>
+                    <p>Sustainable operations prioritize transparent communication, consistent product execution, and predictable delivery over short-term gimmicks. When a brand eliminates complex fine print, communicates value honestly, and respects the consumer's time, it constructs an authentic behavioral habit loop. Over time, this deep trust reduces overall customer acquisition costs and improves retention numbers—proving that operational discipline scales businesses far more effectively than artificial discount cycles.</p>
+                </div>
             </div>
-            <div class="essay-card">
-                <h4>What I Learned From Studying Fintech</h4>
-                <p>The core battle in credit platforms isn't just about designing a clean UI. Success lies in structural optimization—mastering regulatory compliance, risk profiling, and securing low-cost capital engines.</p>
+
+            <!-- Essay 3 -->
+            <div class="essay-card" onclick="toggleEssay(this)">
+                <div class="essay-header">
+                    <h4>What I Learned From Studying Fintech Companies</h4>
+                    <span class="essay-trigger-icon">+</span>
+                </div>
+                <p class="essay-preview">The core battle inside digital credit platforms lies in regulatory engineering and low-cost capital loops.</p>
+                <div class="essay-content">
+                    <p>Analyzing modern financial ecosystems reveals that fintech innovation is rarely just about designing smooth user interfaces or digital credit cards. The true structural battle happens deep inside the back-end infrastructure: navigating shifting regulatory frameworks, managing risk profiles, and securing low-cost capital engines.</p>
+                    <p>Companies that excel here do not treat regulatory compliance as a bureaucratic obstacle; they build directly into it, converting complex statutory changes into competitive advantages. Watching platforms adapt to changing oversight teaches you a critical operational truth: the most resilient products are built by operators who understand how to couple bold design ideas with strict structural frameworks.</p>
+                </div>
             </div>
-            <div class="essay-card">
-                <h4>The Most Underrated Skill in Startups</h4>
-                <p>High velocity matters more than perfection. The most valuable teammates are generalists who can take a messy, half-formed prompt, map a sequence of steps, and see it through to completion without hand-holding.</p>
+
+            <!-- Essay 4 -->
+            <div class="essay-card" onclick="toggleEssay(this)">
+                <div class="essay-header">
+                    <h4>The Most Underrated Skill in Startups</h4>
+                    <span class="essay-trigger-icon">+</span>
+                </div>
+                <p class="essay-preview">High structural velocity matters more than perfection. True value comes from taking messy data and closing the loop.</p>
+                <div class="essay-content">
+                    <p>The single most valuable asset in an early-stage startup ecosystem is an operator who can confidently own an ambiguous problem statement and execute it cleanly to completion without hand-holding. In fast-paced structures, founders frequently deal with half-formed data, evolving parameters, and unexpected market requirements.</p>
+                    <p>The generalists who make themselves irreplaceable do not wait for a perfect checklist. Instead, they pick up a messy target, break down the noise into a clear sequence of operational actions, document their progress, and systematically close the loop. This high-agency execution velocity keeps early-stage projects moving forward and scales startups faster than any theoretical plan ever could.</p>
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -592,6 +701,24 @@
         <div>Curious about startups. Interested in building things that matter.</div>
         <div style="font-size: 0.8rem; opacity: 0.5;">© 2026 Annanya. All rights reserved.</div>
     </footer>
+
+    <!-- Native JavaScript for Accordion Expansion Trigger -->
+    <script>
+        function toggleEssay(cardElement) {
+            // Check if this card is already expanded
+            const isExpanded = cardElement.classList.contains('expanded');
+            
+            // Optional: Close any other open essays to keep layout clean
+            document.querySelectorAll('.essay-card').forEach(card => {
+                card.classList.remove('expanded');
+            });
+            
+            // If it wasn't expanded, expand it now
+            if (!isExpanded) {
+                cardElement.classList.add('expanded');
+            }
+        }
+    </script>
 
 </body>
 </html>
